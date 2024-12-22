@@ -42,7 +42,7 @@ class GaussianNaiveBayes:
   def predict(self, samples):
     predictions = []
     
-    # menghitung posterior untuk tiap kelas dan cari kelas dengan posterior terbesar
+    # menghitung posterior untuk tiap kelas dan cari posterior terbesar
     for sample in samples:
       posteriors = [self.posterior(sample, idx) for idx in range(len(self.classes))]
       predicted_class_idx = np.argmax(posteriors)
